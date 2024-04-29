@@ -35,6 +35,22 @@
  
 -  Vztah mezi napětím a proudem ve vodiči s elektrickým odporem vyjadřuje Ohmův zákon.
 
+## Current
+- uspořádaný pohyb **nosičů elektrického náboje<sup>[3](#notes)</sup> prošlého za jednotku času** daným průřezem elektrického vodiče.
+- Elektrický proud je roven **elektrickému náboji q  procházejícím průřezem vodiče S za jednotku času**
+![current](https://wikimedia.org/api/rest_v1/media/math/render/svg/2a74ff85e689463ce65dd41728ed6a457a538fd5)
+- resp. **plošnému integrálu** přes hustotu elektrického proudu **j** procházejícího plochou **S** </br>
+![current 2](https://wikimedia.org/api/rest_v1/media/math/render/svg/8d294937a92d9dd9d99f5fed8f465af3b2baa273) 
+
+- **Stacionární** a **nestacionární** elektrický proud
+- Jako stacionární se označuje elektrický proud, který je v **čase konstantní, tj. má časově neměnnou velikost i směr toku.** Stacionárním proudem je generováno **stacionární magnetické pole**. Jako nestacionární se označuje elektrický proud, který v čase mění velikost nebo směr toku. 
+  - **Stacionární - setrvaly,nemenny**
+    - Prochází-li elektrický náboj průřezem vodiče **rovnoměrně**, definuje se stacionární proud jako množství náboje **ΔQ**  prošlého průřezem vodiče za čas **Δt**:
+    - ![current 3](https://wikimedia.org/api/rest_v1/media/math/render/svg/d0f976999deb0e68b22eae985f690603bde3d84a)
+  - **nestacionární**
+    - Okamžitá hodnota proudu je **limitním případem stacionárního proudu**, definuje se jako množství náboje **q**, prošlého průřezem vodiče za infinitesimální (nekonečně krátký) čas **t**:
+    - ![current 4](https://wikimedia.org/api/rest_v1/media/math/render/svg/4cebfbaf05dc3713efa9bd771fceb9870bbc3205)
+
 
 # Notes
 - **Napájecí zdroje**
@@ -46,3 +62,6 @@
   - Výše rozdílu (vyjádřená ve voltech) určuje velikost existující potenciální energie k přesunu elektronů z jednoho místa na druhé.
   - Tato veličina určuje **množství práce, kterou lze potenciálně vykonat prostřednictvím obvodu.**
   - Domácí alkalická baterie typu AA například poskytuje 1,5 V. Běžná domácí zásuvka má 230 V. **Čím vyšší napětí je v obvodu, tím větší je jeho schopnost „protlačit“ více elektronů a vykonat více práce.**
+- **Nosič náboje**
+  -  volná částice přenášející elektrický náboj, zejména částice nesoucí elektrický proud v elektrických vodičích. Příkladem jsou **elektrony a ionty.**
+
