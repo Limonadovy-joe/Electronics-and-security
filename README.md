@@ -52,6 +52,31 @@
     - ![current 4](https://wikimedia.org/api/rest_v1/media/math/render/svg/4cebfbaf05dc3713efa9bd771fceb9870bbc3205)
 
 
+## Resistance
+-  je reálnou částí **komplexní impedance elektrického obvodu**, bránící průchodu elektrického proudu.
+   -  **Impedance** je komplexní veličina **elektrického obvodu vyjádřená reálnou rezistancí a imaginární reaktancí**, bránící průchodu elektrického proudu.
+      -  **R** je rezistance (odporová složka), **X** je reaktance (složka **závislá na změnách napětí a proudu způsobených kapacitami a induktancemi v obvodu**), j je **imaginární jednotka (sqrt(-1))**, používaná pro vyjádření **fázového posunu mezi proudem a napětím.<sup>[4](#notes)</sup>**
+      -    ![current 5](https://wikimedia.org/api/rest_v1/media/math/render/svg/65e7b1fe3101d47d559007af1409b65b9eaf0ebf)
+      -  Zatímco elektrický odpor charakterizuje pouze schopnost materiálu  **bránit průchodu stejnosměrného elektrického proudu (DC)**, **impedance** zahrnuje jak **odpor, tak fázi proudu ve vztahu k napětí**(fázového posunu mezi proudem a napětím)  v střídavých obvodech.
+      -  Impedance tedy vyjadřuje **celkový odpor obvodu proti průchodu střídavého proudu** a je obecně frekvenčně závislá.
+
+- Hodnota elektrického odporu závisí na **materiálu, průřezu, délce i teplotě vodiče.**
+- Odpor **vodičů se vzrůstající teplotou stoupá** (kladný teplotní součinitel elektrického odporu), kdežto **odpor polovodičů se vzrůstající teplotou klesá** (záporný teplotní součinitel elektrického odporu).
+- Teplotní součinitel odporu  je fyz. veličina vyjadřující **závislost odporu (rezistivity) vodiče (polovodiče) na teplotě.**, **kolikrát se zvětší odpor při zahřátí vodiče o 1°C**
+- **Čím delší je vodič, tím větší je jeho odpor; čím je jeho průřez větší, tím menší je odpor**
+
+- **Závislost na teplotě**
+  - Závislost el. odporu vodičů na teplotě je ve **velkém teplotním intervalu prakticky lineární**
+  - S **rostoucí teplotou roste odpor**
+  - Při velmi nízkých teplotách klesá **měrný odpor na neměřitelnou hodnotu**. Tento jev se nazývá **supravodivost** – očekávání vynálezu pro budoucnost, nyní je nutno chladit kap. Dusíkem, což je neekonomické, měl by přijít nový materiál, **který nebude potřeboval tak nízkou teplotu.**
+
+- **Ztráty**
+  - Teče-li vodičem s odporem **R** proud **I** dochází k přeměně **elektrické energie na teplo** a tím k **výkonovým ztrátám**, které lze vyjádřit vztahem:
+  -  ![current 6](https://wikimedia.org/api/rest_v1/media/math/render/svg/e436cb13eae078de979968b97d3155ca2a84c93e)
+  -  Tento jev se využívá u zařízení jako žárovka **(emituje světlo žhavící spirály)** nebo elektrické topení (emituje teplo žhavící spirály), nicméně je nežádoucí při přenosu energie. 
+
+
+
 # Notes
 - **Napájecí zdroje**
   - **Síťový adaptér** - transformuje vysoké napětí z elektrické sítě na nižší napětí,
@@ -64,4 +89,12 @@
   - Domácí alkalická baterie typu AA například poskytuje 1,5 V. Běžná domácí zásuvka má 230 V. **Čím vyšší napětí je v obvodu, tím větší je jeho schopnost „protlačit“ více elektronů a vykonat více práce.**
 - **Nosič náboje**
   -  volná částice přenášející elektrický náboj, zejména částice nesoucí elektrický proud v elektrických vodičích. Příkladem jsou **elektrony a ionty.**
+- **fázovy posun mezi proudem a napětím**
+  -  pouziva se k **analýze střídavých (AC) elektrických obvodů.**
+  -  Vyjadřuje míru, o **kterou jsou fáze proudového a napěťového signálu posunuty vůči sobě.** Tento posun ovlivňuje, **jak proud a napětí vzájemně interagují** a je důležitý pro chápání výkonu obvodu.
+  -  Střídavý proud a napětí se mohou pohybovat sinusovým nebo kosinusovým vzorem, který se opakuje každý cyklus.
+  -  V ideálním případě, **kdy jsou proud a napětí ve fázi, dosahují svých maximálních a minimálních hodnot ve stejný okamžik.** Fázový posun mezi proudem a napětím se měří ve stupních (°) nebo radiánech a obvykle se uvádí v rozmezí od -180° do +180°.
+  -  Fázový posun 0°: **Proud a napětí jsou ve fázi**, což znamená, **že maximální a minimální hodnoty obou signálů nastávají ve stejný čas.**
+  -  V obvodech, kde jsou přítomny **induktory (cívky) nebo kondenzátory**, dochází ke změně fázového posunu mezi proudem a napětím, protože tyto komponenty **ukládají a uvolňují energii, což způsobuje, že proud "zaostává" nebo "předbíhá" napětí.**
+  -  Fázový posun má zásadní dopad na elektrický výkon v obvodu.
 
