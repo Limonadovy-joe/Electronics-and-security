@@ -4,7 +4,7 @@
   - [Voltage](#voltage)
   - [Current](#current)
   - [Resistance](#resistance)
-  - [Power](#power)
+  - [Eletric Power](#eletric-power)
   - [Capacitance](#capacitance)
   - [Frequency](#frequency)   
 - [Notes](#notes)
@@ -58,7 +58,9 @@
       -  **R** je rezistance (odporová složka), **X** je reaktance (složka **závislá na změnách napětí a proudu způsobených kapacitami a induktancemi v obvodu**), j je **imaginární jednotka (sqrt(-1))**, používaná pro vyjádření **fázového posunu mezi proudem a napětím.<sup>[4](#notes)</sup>**
       -    ![current 5](https://wikimedia.org/api/rest_v1/media/math/render/svg/65e7b1fe3101d47d559007af1409b65b9eaf0ebf)
       -  Zatímco elektrický odpor charakterizuje pouze schopnost materiálu  **bránit průchodu stejnosměrného elektrického proudu (DC)**, **impedance** zahrnuje jak **odpor, tak fázi proudu ve vztahu k napětí**(fázového posunu mezi proudem a napětím)  v střídavých obvodech.
+      -  **Reaktance (jalový odpor)** je imaginární částí komplexní impedance elektrického obvodu. **Reaktance indukčního charakteru se též nazývala induktance (indukční odpor)**, reaktance kapacitního charakteru se též nazývala **kapacitance (kapacitní odpor).**
       -  Impedance tedy vyjadřuje **celkový odpor obvodu proti průchodu střídavého proudu** a je obecně frekvenčně závislá.
+      -  Jako impedanci v obecném slova smyslu označujeme **poměr napětí a proudu**. **Je-li fázový posuv mezi proudem a napětím nulový**, mluvíme o odporu činném. Je-li **posuv +90°, jde o jalový odpor (reaktanci) indukční**. **Jeli posuv -90°, jde o jalový odpor (reaktanci) kapacitní.**
 
 - Hodnota elektrického odporu závisí na **materiálu, průřezu, délce i teplotě vodiče.**
 - Odpor **vodičů se vzrůstající teplotou stoupá** (kladný teplotní součinitel elektrického odporu), kdežto **odpor polovodičů se vzrůstající teplotou klesá** (záporný teplotní součinitel elektrického odporu).
@@ -74,6 +76,23 @@
   - Teče-li vodičem s odporem **R** proud **I** dochází k přeměně **elektrické energie na teplo** a tím k **výkonovým ztrátám**, které lze vyjádřit vztahem:
   -  ![current 6](https://wikimedia.org/api/rest_v1/media/math/render/svg/e436cb13eae078de979968b97d3155ca2a84c93e)
   -  Tento jev se využívá u zařízení jako žárovka **(emituje světlo žhavící spirály)** nebo elektrické topení (emituje teplo žhavící spirály), nicméně je nežádoucí při přenosu energie. 
+
+## Eletric Power
+-  vyjadřuje vykonanou **elektrickou práci konanou elektrickou silou za jednotku času.** Pro harmonický průběh napětí a proudu se kromě **činného výkonu P** definuje dále **jalový a zdánlivý výkon Q a S.**
+-  je míra, kterou **elektrická soustava přeměňuje elektrickou energii na jiné formy energie (například světlo, teplo, mechanickou energii atd.)**
+-  jedna se o časově měřenou veličinu, která udává, **jak rychle se energie spotřebovává nebo dodává.**
+
+- Činný proud s napětím vytváří **činný výkon P [W - watt]**. Činný výkon je užitečný výkon zdroje nebo spotřebiče, který koná práci. **Vyjadřuje skutečnou spotřebovanou el. energii, která se mění na jiný druh energie.**
+- 
+- Jalový proud s napětím vytváří **jalový výkon Q [Var - voltampér reaktanční]**. Jalový výkon je nepotřebný a neužitečný výkon, který nekoná žádnou práci. **Je způsobený fázovým posunem mezi napětím a proudem.**
+
+- Celkový proud s napětím vytváří **zdánlivý výkon S [VA - voltampér].** **Zdánlivý výkon je celkový výkon dodávaný zdrojem do střídavých obvodů.** Je tvořen celkovým proudem, který zdroj dodává do obvodu, **nezávislým na fázovém posunu mezi napětím a proudem.** Zdánlivý výkon slouží k určení výkonu zdroje, transformátoru atd.
+
+
+
+
+
+
 
 
 
@@ -96,5 +115,9 @@
   -  V ideálním případě, **kdy jsou proud a napětí ve fázi, dosahují svých maximálních a minimálních hodnot ve stejný okamžik.** Fázový posun mezi proudem a napětím se měří ve stupních (°) nebo radiánech a obvykle se uvádí v rozmezí od -180° do +180°.
   -  Fázový posun 0°: **Proud a napětí jsou ve fázi**, což znamená, **že maximální a minimální hodnoty obou signálů nastávají ve stejný čas.**
   -  V obvodech, kde jsou přítomny **induktory (cívky) nebo kondenzátory**, dochází ke změně fázového posunu mezi proudem a napětím, protože tyto komponenty **ukládají a uvolňují energii, což způsobuje, že proud "zaostává" nebo "předbíhá" napětí.**
-  -  Fázový posun má zásadní dopad na elektrický výkon v obvodu.
-
+  
+  -  Fázový posun mezi **napětím a proudem v elektrickém obvodu** může být způsoben několika faktory:
+     -  **Induktance a kapacitance:** Přítomnost **induktivních (cívkových)** a **kapacitních (kondenzačních) prvků** v obvodu může způsobit fázový posun mezi napětím a proudem. Například **induktory** mají tendenci vytvářet fázový posun, přičemž **proud zaostává za napětím**, zatímco **kondenzátory** mohou způsobit posun, kde **napětí zaostává za proudem.**
+     -  V obvodu střídavého proudu **se kondenzátor opakovaně nabíjí a vybíjí**, což má za následek **předbíhání elektrického proudu před napětím (fázový posun)** a vznik **kapacitance (kapacitní reaktance)**, tj. zdánlivého odporu proti průchodu střídavého proudu.
+     - Induktory - cívka - (pusobi zde **Indukční odpor**, **induktance**)  v obvodu se střídavým proudem působí jako odpor, který je tím větší, čím větší je indukčnost cívky a frekvence proudu.
+  - Fázový posun má zásadní dopad na elektrický výkon v obvodu. 
