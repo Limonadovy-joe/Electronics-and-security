@@ -5,7 +5,8 @@
   - [Current](#current)
   - [Resistance](#resistance)
   - [Eletric Power](#eletric-power)
-  - [Capacitance](#capacitance)
+  - [Eletric Capacitance](#eletric-capacitance)
+  - [Inductance](#inductance)
   - [Frequency](#frequency)   
 - [Notes](#notes)
  
@@ -91,8 +92,20 @@
 
 
 
+## Eletric Capacitance
+- vyjadřující **schopnost vodiče uchovat elektrický náboj**. Čím větší kapacita, tím větší množství náboje může být ve vodiči.
+- Elektrický náboj je fyzikální veličina a vlastnost hmoty. **Hmota nesoucí elektrický náboj je zdrojem elektromagnetického pole.**
+- Přestože je elektrická kapacita obecně vlastností každého vodiče, využívá se především u **kondenzátorů**, pro něž je kapacita definována jako **množství náboje mezi deskami kondenzátoru o jednotkovém elektrickém napětí (1 V).**
+- Kapacity kondenzátorů dosahují běžně hodnot v **pF**, proto je možné setkat se s hodnotami např. 3k3 = 3300 pF = 3,3 nF. 
+-  jednotka: **farad, značka F**
+-  Elektrická kapacita je závislá **na tvaru a velikosti a materiálu (dielektrika) tělesa.**
+-  Dielektrikum je látka (izolant), která má schopnost **polarizace** (tedy být polarizována).
 
-
+## Inductance
+- indukčnost
+- vyjadřující schopnost dané konfigurace **elektricky vodivých těles protékaných elektrickým proudem vytvářet ve svém okolí magnetické pole.**
+- Magnetické pole je fyzikální pole, **jehož zdrojem je pohybující se elektrický náboj, tj. elektrický proud.**
+- Jednotka SI: **henry, značka H**
 
 
 
