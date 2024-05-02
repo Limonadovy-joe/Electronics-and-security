@@ -7,7 +7,8 @@
   - [Eletric Power](#eletric-power)
   - [Eletric Capacitance](#eletric-capacitance)
   - [Inductance](#inductance)
-  - [Frequency](#frequency)   
+  - [Frequency](#frequency)
+- Ohms law[#ohms-law]    
 - [Notes](#notes)
  
 # Definition of basic quantities
@@ -106,6 +107,33 @@
 - vyjadřující schopnost dané konfigurace **elektricky vodivých těles protékaných elektrickým proudem vytvářet ve svém okolí magnetické pole.**
 - Magnetické pole je fyzikální pole, **jehož zdrojem je pohybující se elektrický náboj, tj. elektrický proud.**
 - Jednotka SI: **henry, značka H**
+
+
+## Frequency
+- je veličina, která udává **počet opakování periodického děje za daný časový úsek.**
+- Například v obvodu **střídavého proudu** takto označujeme **počet kmitů napětí či proudu za jednotku času.**
+- **Kmit** je jedno dokončení periodického pohybu nebo oscilace.  Například v kontextu **vlnění, oscilace** může "kmit" znamenat **jednu úplnou periodu oscilace vlny.**
+- Jednotka SI: hertz, značka jednotky: **Hz** (rozměr 1 Hz = 1 s−1)
+- Často používané násobky: kilohertz (kHz), megahertz (MHz) a gigahertz (GHz)
+- Další jednotky: **otáčky za minutu** (ot./min)
+  - min je jednotkou kmitočtu (frekvence) otáčení u točivých strojů.
+  - **Jedna otáčka za minutu odpovídá 1/60 Hertzu.**
+
+- Mezi frekvencí **f** a časovou periodou **T**  platí vztah:
+![current 7](https://wikimedia.org/api/rest_v1/media/math/render/svg/357a92cb7cff9eb6f867f8174376d3a858886686)
+
+- Při popisu **kmitání a vlnění** se používá také **úhlová frekvence (úhlový kmitočet)**
+![current 8](https://wikimedia.org/api/rest_v1/media/math/render/svg/1766952347a613e9c2a3881b06781a290e6a26c5)
+-  Úhlová frekvence je fyzikální podstatou **změny fáze za jednotku času**:
+![current 9](https://wikimedia.org/api/rest_v1/media/math/render/svg/eef381cce9977861fcf04147a8ad8759e5d50798)
+
+Úhlový kmitočet 1 s−1 má kmitající objekt, jehož 1 kmit proběhne za 1 sekundu, tj. doba periody T = 1 s, jinak řečeno fáze periodického děje se změní o 2 π  (rad) resp. 360° za 1 sekundu. 
+
+
+## Ohms law
+
+
+
 
 
 
