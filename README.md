@@ -8,7 +8,9 @@
   - [Eletric Capacitance](#eletric-capacitance)
   - [Inductance](#inductance)
   - [Frequency](#frequency)
-- Ohms law[#ohms-law]    
+- [Ohms law](#ohms-law)
+- [Series and parallel connection](#series-and-parallel-connection)
+- [Methods of solving linear electric circuits](#methods-of-solving-linear-electric-circuits)    
 - [Notes](#notes)
  
 # Definition of basic quantities
@@ -131,9 +133,39 @@
 
 
 ## Ohms law
+- vyjadřuje závislost **proudu** mezi dvěma body na vodiči na **přiloženém napětí a na odporu vodiče**:</br>
+![current 10](https://wikimedia.org/api/rest_v1/media/math/render/svg/1f9631badbcdf8dfe5efa01e3a72b51f8c2671f1)
+- odtud napětí na koncích vodiče: U = I ⋅ R
+- Ačkoli byl původně odvozen pro stejnosměrný proud, platí jeho vzorce i pro střídavý proud s tou výhradou, že **U  a I jsou komplexní čísla** a místo **R se užívá označení Z**, které znamená **impedanci** (včetně imaginárních složek).
+- **Předpoklad platnosti Ohmova zakona**:
+  - V této podobě předpokládá, že **napětí na vodiči je stálé**, **nezávislé na procházejícím proudu** čili že **vnitřní odpor zdroje(odpor, způsobuje pokles napětí reálného elektrického zdroje při zatížení. Pokles napětí závisí na proudu a vnitřním odporu) je malý**, a předpokládá také, že **odpor vodiče nezávisí na procházejícím proudu.**
+  - Odpor většiny látek je však **závislý na jejich teplotě**, která se **průchodem většího proudu může měnit.** 
+  - Zákon tedy platí jen v oblasti, kde **intenzita(stupeň síly, stupeň mohutnosti, síla, mohutnost, vydatnost jevu, děje) proudu je dostatečně malá**, aby **napětí zdroje nekleslo** a aby se vodič výrazně nezahříval.     
 
 
+- Ohmův zákon: vztahy mezi proudem, napětím a odporem jsou **lineární a dají se zapsat ve trojím tvaru**
+- **V = I * R**
+- Tato rovnice představuje první formu Ohmova zákona, kde **napětí V je přímo úměrné proudu I s koeficientem úměrnosti rovným odporu R.**
+- Přímá úměrnost je každá závislost jedné veličiny **y**  na druhé veličině **x**, která zachovává jejich poměr, tzn. která splňuje, že kolikrát se zvětší **x** , tolikrát se zvětší **y**.
+- Toto platí právě tehdy, existuje-li reálné číslo různé od nuly **k**, pro které platí:
+![current 11](https://wikimedia.org/api/rest_v1/media/math/render/svg/7da347689add557fbb01688f5ac52426b8cc387c)
+- Toto číslo **k**  se nazývá **koeficient přímé úměrnosti** (popř. konstanta přímé úměrnosti). 
+- **Pokud se teplota vodiče nemění**, je prochazejici proud **přímo úměrný napětí mezi konci vodiče.**
 
+## Series and parallel connection
+- **Sériový obvod nemá žádná větvení**, součástky jsou zapojeny za sebou
+- **Paralelní obvod obsahuje body větvení (uzly)**, součástky jsou zapojeny vedle sebe podobně
+
+
+## Methods of solving linear electric circuits
+- Lineárním obvodem rozumíme takový obvod, který je složen výhradně z **lineárních prvků** (tj. prvků
+s přímkovou voltampérovou charakteristikou).
+- Z nejvýznamnějších a nejpoužívanějších metod řešení lineárních obvodů zde jmenujme:
+  - metodu řešení pomocí **smyčkových proudů**
+  - metodu řešení pomocí **uzlových napětí**
+  - metodu řešení **lineární superpozicí**
+  - **Theveninovu (Nortonovu) poučku**
+ 
 
 
 
@@ -161,4 +193,4 @@
      -  **Induktance a kapacitance:** Přítomnost **induktivních (cívkových)** a **kapacitních (kondenzačních) prvků** v obvodu může způsobit fázový posun mezi napětím a proudem. Například **induktory** mají tendenci vytvářet fázový posun, přičemž **proud zaostává za napětím**, zatímco **kondenzátory** mohou způsobit posun, kde **napětí zaostává za proudem.**
      -  V obvodu střídavého proudu **se kondenzátor opakovaně nabíjí a vybíjí**, což má za následek **předbíhání elektrického proudu před napětím (fázový posun)** a vznik **kapacitance (kapacitní reaktance)**, tj. zdánlivého odporu proti průchodu střídavého proudu.
      - Induktory - cívka - (pusobi zde **Indukční odpor**, **induktance**)  v obvodu se střídavým proudem působí jako odpor, který je tím větší, čím větší je indukčnost cívky a frekvence proudu.
-  - Fázový posun má zásadní dopad na elektrický výkon v obvodu. 
+ - Fázový posun má zásadní dopad na elektrický výkon v obvodu. 
