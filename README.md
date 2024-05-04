@@ -243,10 +243,10 @@ U střídavých napětí (proudů) je jejich podrobnější popis rozmanitějš�
   - Efektivní hodnota
 
 - **Časové parametry**
-- Doba periody
-- Frekvence
-- Doba náběžné části průběhu
-- Doba sestupné části průběhu
+  - Doba periody
+  - Frekvence
+  - Doba náběžné části průběhu
+  - Doba sestupné části průběhu
 
 # Notes
 - **Efektivní hodnota** -
