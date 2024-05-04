@@ -10,7 +10,11 @@
   - [Frequency](#frequency)
 - [Ohms law](#ohms-law)
 - [Series and parallel connection](#series-and-parallel-connection)
-- [Methods of solving linear electric circuits](#methods-of-solving-linear-electric-circuits)    
+- [Methods of solving linear electric circuits](#methods-of-solving-linear-electric-circuits)
+- [Voltage divider](#voltage-divider)
+- [Rele](#rele)
+- [Contactor](#contactor)
+- [ESP 32 voltage](#esp-32-voltage)
 - [Notes](#notes)
  
 # Definition of basic quantities
@@ -107,6 +111,7 @@
 ## Inductance
 - indukčnost
 - vyjadřující schopnost dané konfigurace **elektricky vodivých těles protékaných elektrickým proudem vytvářet ve svém okolí magnetické pole.**
+- **Cívka je schopna akumulovat enegii v magnetickém poli.**
 - Magnetické pole je fyzikální pole, **jehož zdrojem je pohybující se elektrický náboj, tj. elektrický proud.**
 - Jednotka SI: **henry, značka H**
 
@@ -166,10 +171,94 @@ s přímkovou voltampérovou charakteristikou).
   - metodu řešení **lineární superpozicí**
   - **Theveninovu (Nortonovu) poučku**
  
+## Voltage divider
+- také napěťový dělič nebo odporový dělič používá pro získání **výstupního napětí (Uout)**, které je **úměrné vstupnímu napětí (Uin).**
+- Pro dva **rezistory, které jsou spojeny za sebou (v sérii)**:
+-  ![current 12](https://upload.wikimedia.org/wikipedia/commons/e/eb/Einfacher-unbelasteter-Spannungsteiler.svg)
+-  Pro **napětí U1** platí vztah:</br>
+![current 13](https://wikimedia.org/api/rest_v1/media/math/render/svg/fb4474f04162755081b70eb2f7d57af394558d16)
+-  Pro **napětí U2** platí vztah:</br>
+![current 13](https://wikimedia.org/api/rest_v1/media/math/render/svg/a24caf7c0b5c769f4309e5730e47653d115b6f73)
+-  Poměr výstupního napětí **Ui** ke vstupnímu **U** se musí pohybovat uvnitř intervalu od 0 do 1. napr. 1/2 u dvou rezistoru kde je stejny odpor...
+-  Dělič napětí se velmi často používá v elektrických obvodech pro **rozdělení napětí (většinou zdroje napětí) na dvě části tak, aby bylo možné napájet spotřebič, jehož pracovní napětí je menší, než napětí použitého zdroje.**
 
+- **Reostat a potenciometr**
+- nastavitelný nebo alespoň přepínatelný rezistor 
+- Jedná se o jednu a tutéž součástku s nastavitelným odporem, která může být zapojena dvěma způsoby podle toho, jakou funkci má plnit.
+  - **Reostat**
+    -  slouží jako **mechanicky nastavitelný odpor** (posuvem nebo otáčením vodivého kontaktu – jezdce). Používá se k **regulaci proudu v obvodu**
+    - nejčastěji jako sada rezistorů s mnohopolohovým přepínačem nebo jako posuvný rezistor, **Posuvné reostaty mohou mít pružinovou aretaci**
+  - **Potenciometer**
+    - slouží jako **dělič napětí**, přičemž jezdcem nastavujeme poměr mezi **R1 a R2**. Využívá se k regulaci napětí a k mechanickému ovládání elektrických zařízení a obvodů, např. jako ovladač hlasitosti u reproduktorů. 
 
+## Rele
+- je specializované zařízení sloužící ke **spínání signálu.**
+- Relé jsou součástky určené pro **spínání větší zátěže.**
+- jako elektronický spínač ho ve většině úkonů nahradily **tranzistory**
+- **esp => Elektrický ohřívač vody(230V nebo 120V)** -  bude nutné použít relé nebo jiné zařízení na **přepínání vyššího napětí.**
+- Zde jsou možné alternativy k použití relé:
+  - **Tranzistorové spínání**: Místo relé můžete použít tranzistor jako spínací prvek. **MOSFET**
+  - Optoelektronické relé
+  - **Solid State Relay (SSR)**: SSR je typ relé, který nevyužívá mechanické spínací kontakty, ale spíná pomocí polovodičových prvků, jako jsou tranzistory nebo TRIA
+  - **MOSFET relé**: MOSFET relé je relé založené na MOSFET tranzistoru
+
+## Contactor
+- Stykač
+- **spínání nebo rozepínání elektrického spojení**, ve většině případů využívající elektromagnetický pohon.
+- **Stykače mají hlavní (též silové) kontakty**, které spínají **velké proudy tekoucí do ovládaného spotřebiče.**
+- Vedle hlavních kontaktů mají stykače kontakty pomocné určené k **ovládání, blokování, signalizaci**
+- **Výměnou jednotlivých částí**, například sady **kontaktů nebo cívky**, je možno **stykač upravit pro jiné napětí** nebo vybavit jiným typem kontaktů
+
+Při popisu stykače, na schématech i na skutečných stykačích se používá označení:
+- **A1, A2** - svorky ovládací cívky
+- **NO** (Normaly Open) pomocné kontakty spínací
+- **NC** (Normaly Closed) pomocné kontakty rozpínací.
+
+- Dulezity atribut: **Spínací kapacita**:
+- **Stykač**: Stykač má obvykle vyšší spínací kapacitu než relé, což znamená, že může **spínat vyšší proudy a napětí.**
+- **Relé**: Relé má obvykle nižší spínací kapacitu než stykač, což ho činí vhodnějším pro spínání nižších výkonů(světel, topení, ventilátorů).
+
+## ESP 32 voltage
+- **Vcc**
+  - Voltage Common Collector 
+  - napětí připojené k obvodu
+  - pin označený jako VCC je určen pro **připojení kladného pólu externího zdroje napájení**
+  - ESP8266 nebo ESP32 může být pin označený jako VCC, ke kterému připojíte **kladný pól baterie, adaptéru na střídavý proud (AC)**
+  - připojit záporný pól (GND - Ground), **který uzavírá elektrický obvod**
+  - 3.3V u ESP32
+- **VDD**
+  - **vnitřní pracovní napětí zařízení**
+  -  **Vcc > Vdd**
+  -  noticed in the revision history of the wroom module datasheet that the VDD range was changed from 2.7-3.6 to 3.0-3.6
+- **VIN: VIN (Voltage IN)**
+  - vstupní napětí
+  - VIN is connected to a **voltage regulator**, 3.3V isn't. **VIN is connected to the 5V USB line**
+
+## Alternating voltage
+U střídavých napětí (proudů) je jejich podrobnější popis rozmanitější. U těchto průběhů definujeme parametry, které můžeme rozdělit na **napěťové a časové.**
+- **Napěťové (proudové) parametry**
+  - Okamžitá hodnota
+  - Maximální a minimální hodnota
+  - Střední hodnota
+  - Efektivní hodnota
+
+- **Časové parametry**
+- Doba periody
+- Frekvence
+- Doba náběžné části průběhu
+- Doba sestupné části průběhu
 
 # Notes
+- **Efektivní hodnota** -
+  -  je statistická hodnota měřící velikost měnící se veličiny. Užitečná je zejména u **periodických veličin**
+  -  Střídavý proud a napětí se většinou udávají svými efektivními hodnotami. 
+  -  V silnoproudé elektrotechnice se **napětí i intenzita střídavého proudu zpravidla udává v efektivních**, nikoli v maximálních hodnotách.
+  -  Efektivní hodnota střídavého proudu **(Ief)** je rovna hodnotě **stejnosměrného proudu**, který by při průchodu odporovou zátěží dával **stejný průměrný výkon.**
+  -  Efektivní hodnota střídavého proudu je **hodnota proudu stejnosměrného, který v daném obvodu vykoná za stejný čas stejnou práci jako proud střídavý.**
+  -  Efektivní hodnota střídavého napětí **(Uef)** je rovna hodnotě **stejnosměrného napětí**, které by při přiložení na odporovou zátěž dávalo stejný **průměrný výkon.**
+  -  Efektivní hodnota proudu: **obdélníkový průběh**, **jednocestně usměrněný proud**
+ 
+  
 - **Napájecí zdroje**
   - **Síťový adaptér** - transformuje vysoké napětí z elektrické sítě na nižší napětí,
   - **Generátor** - ktery konvertuje mechanickou energii na elektrickou energii,
@@ -179,8 +268,12 @@ s přímkovou voltampérovou charakteristikou).
   - Výše rozdílu (vyjádřená ve voltech) určuje velikost existující potenciální energie k přesunu elektronů z jednoho místa na druhé.
   - Tato veličina určuje **množství práce, kterou lze potenciálně vykonat prostřednictvím obvodu.**
   - Domácí alkalická baterie typu AA například poskytuje 1,5 V. Běžná domácí zásuvka má 230 V. **Čím vyšší napětí je v obvodu, tím větší je jeho schopnost „protlačit“ více elektronů a vykonat více práce.**
+
+
 - **Nosič náboje**
   -  volná částice přenášející elektrický náboj, zejména částice nesoucí elektrický proud v elektrických vodičích. Příkladem jsou **elektrony a ionty.**
+
+  
 - **fázovy posun mezi proudem a napětím**
   -  pouziva se k **analýze střídavých (AC) elektrických obvodů.**
   -  Vyjadřuje míru, o **kterou jsou fáze proudového a napěťového signálu posunuty vůči sobě.** Tento posun ovlivňuje, **jak proud a napětí vzájemně interagují** a je důležitý pro chápání výkonu obvodu.
